@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Codigo Morse</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos/index.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<h1 class="pb-4 mb-3">Codigo Morse</h1>	
+				<div class="input-group">
+				    <input type="text" class="form-control" placeholder="Ingresar cadena de texto" aria-label="Text input with segmented dropdown button" data-convertir="texto" id="campo">
+					<div class="input-group-append">
+						<button type="button" class="btn btn-outline-secondary" id="convertir"> Convertir</button>
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <span class="sr-only">Conversion</span>
+						</button>
+						<div class="dropdown-menu">
+						  <a class="dropdown-item tipoConversion active" data-conversion="texto" href="#" id="textoMorse">Texto a Morse</a>
+						  <a class="dropdown-item tipoConversion" data-conversion="morse" href="#" id="morseTexto">Morse a Texto</a>
+						</div>
+					</div>
+					<div class="invalid-feedback" id="invalid">
+						Por favor ingresar texto.
+					</div>
+				</div>
+				<div class="py-4">
+					<label for="validationTextarea">Conversión</label>
+					<textarea class="form-control" id="validationTextarea" placeholder="" ></textarea>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6">
+				<div class="d-flex justify-content-between">
+					<h1>Matriz</h1>
+					<button type="button" class="btn btn-outline-info" id="random"> Random</button>
+				</div>
+
+				<div class="row" id="content-table">
+					<table class="table table-striped">
+						<tbody id="table">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/conversion.js"></script>
+	<script src="js/matriz.js"></script>
+</body>
+</html>
